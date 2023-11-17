@@ -1,0 +1,127 @@
+.player {
+  &-menu-control {
+    overflow: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 590px;
+    background-color: #18181b;
+    color: #ffffff;
+    border-radius: 0.4rem;
+    max-width: 90vw;
+    width: 300px;
+
+    .icon {
+      font-size: 18px;
+    }
+
+    &-item {
+      cursor: pointer;
+      width: 100%;
+      position: relative;
+      border-radius: 0.2rem;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      font-weight: 400;
+      font-size: 13px;
+
+      &:hover {
+        background-color: rgb(255 255 255 / 20%);
+      }
+
+      &-title {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-grow: 1;
+
+        .icon {
+          margin-right: 0.3rem;
+        }
+      }
+
+      &-label {
+        -webkit-box-align: center;
+        align-items: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-left: 1rem;
+      }
+
+      &-icon {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-left: 0.3rem;
+        flex-shrink: 0;
+      }
+    }
+
+    &-separator {
+      border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+      margin-top: 0.6rem;
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+      padding-bottom: 0.6rem;
+    }
+
+    &-checklist {
+      display: flex;
+      justify-content: center;
+      padding: 4px 0;
+      margin: 6px 0;
+      font-size: 14px;
+      cursor: pointer;
+
+      &-icon {
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgba(255, 255, 255, 0.57);
+        top: 50%;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-clip: padding-box;
+        border-radius: 100%;
+        margin-right: 8px;
+        position: relative;
+
+        &:hover {
+          border-color: rgba(255, 255, 255, 0.76);
+        }
+
+        &:after {
+          display: none;
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: $player-primary-color !important;
+          inset: 2px;
+          border-radius: 100%;
+        }
+      }
+
+      &.selected {
+        .player-menu-control-checklist {
+          &-icon {
+            border-color: $player-primary-color !important;
+
+            &:after {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+
+    &-definition {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.player {
+  &-overlay {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column !important;
+
+    &-loading {
+      @extend .player-spinner;
+      display: none;
+      margin: 0 auto;
+      font-size: 10px;
+      position: relative;
+      text-indent: -9999em;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      border-right: 2px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      border-left: 2px solid #ffffff;
+      transform: translateZ(0);
+      z-index: 4;
+
+      &,
+      &:after {
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &-play-button {
+      font-size: 7rem !important;
+      border-radius: 0.4rem !important;
+      width: 120px !important;
+      height: 120px !important;
+      display: none !important;
+      color: #ffffff !important;
+      z-index: 2 !important;
+    }
+
+    &-time-preview {
+      z-index: 3;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      inset: 0;
+      background: black;
+
+      .frame-preview {
+        margin: auto;
+        z-index: 1;
+        opacity: 0.75;
+      }
+    }
+  }
+}

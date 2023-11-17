@@ -1,0 +1,22 @@
+@-webkit-keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.player-spinner {
+  -webkit-animation: spinner-rotate 1000ms infinite linear;
+  animation: spinner-rotate 1000ms infinite linear;
+}

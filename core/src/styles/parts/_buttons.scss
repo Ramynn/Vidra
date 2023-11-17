@@ -1,0 +1,23 @@
+.player {
+  &-button {
+    font-size: 20px;
+    background: none;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    padding: 6px;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 1.875rem;
+    height: 1.875rem;
+
+    &:hover {
+      background-color: rgb(255 255 255 / 20%);
+    }
+  }
+}

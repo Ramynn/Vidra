@@ -1,0 +1,23 @@
+.player {
+  &-slider {
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    &-wrapper {
+      height: 0.3rem;
+      border-right: 0.3rem;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
