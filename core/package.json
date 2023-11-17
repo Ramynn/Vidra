@@ -5,7 +5,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "build": "tsup --target es5 --minify",
+    "build": "tsup --target es5 --minify && cp ../README.md ../LICENSE dist/",
     "dev": "tsup --watch",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
     "format": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
@@ -46,6 +46,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
+    "styles",
     "README.md",
     "CHANGELOG.md",
     "LICENSE"
