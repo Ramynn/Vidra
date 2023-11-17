@@ -1,4 +1,4 @@
-import {RecurringTaskScheduler} from './RecurringTaskScheduler';
+import {RecurringTaskScheduler} from '../RecurringTaskScheduler/RecurringTaskScheduler';
 
 jest.useFakeTimers();
 

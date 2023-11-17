@@ -1,4 +1,4 @@
-import {ElapsedTimeTracker} from './ElapsedTimeTracker';
+import {ElapsedTimeTracker} from '../ElapsedTimeTracker/ElapsedTimeTracker';
 
 jest.useFakeTimers();
 

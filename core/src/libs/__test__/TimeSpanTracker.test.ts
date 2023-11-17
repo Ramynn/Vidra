@@ -1,4 +1,4 @@
-import {TimeSpanTracker} from './TimeSpanTracker'; // Adjust the import path accordingly
+import {TimeSpanTracker} from '../TimeSpanTracker/TimeSpanTracker'; // Adjust the import path accordingly
 
 describe('TimeSpanTracker', () => {
   let timeSpanTracker;
