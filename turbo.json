@@ -11,11 +11,20 @@
     },
     "dev": {
       "outputs": ["dist/**", "build/**"],
-      "dependsOn": ["^dev"],
+      "persistent": true,
       "cache": false
     },
     "format": {
       "cache": false
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": [],
+      "cache": false
+    },
+    "test:watch": {
+      "cache": true,
+      "persistent": true
     }
   }
 }

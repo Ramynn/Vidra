@@ -5,5 +5,13 @@
   "rules": {
     "prettier/prettier": "error"
   },
+  "overrides": [
+    {
+      "files": ["**/*.test.(ts|tsx)"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ],
   "root": true
 }

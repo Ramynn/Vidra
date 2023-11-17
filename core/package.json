@@ -8,7 +8,9 @@
     "build": "tsup --target es5",
     "dev": "tsup --watch",
     "lint": "eslint src",
-    "format": "eslint src --fix"
+    "format": "eslint src --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
