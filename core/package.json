@@ -1,6 +1,6 @@
 {
   "name": "vidra",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "React video player in TypeScript - lightweight, customizable, and fast, with support for live streams, offline videos, multiple streaming engines, and Storyboard.",
   "private": false,
   "type": "module",
@@ -45,7 +45,10 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "bugs": {
     "url": "https://github.com/Ramynn/Vidra/issues"
