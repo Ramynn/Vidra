@@ -9,8 +9,7 @@
     "dev": "tsup --watch",
     "lint": "eslint src",
     "format": "eslint src --fix",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

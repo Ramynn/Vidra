@@ -8,6 +8,8 @@ const config: Config = {
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   setupFilesAfterEnv: ['../jest-setup.ts'],
   bail: true,
+  coverageReporters: ['json'],
+  coverageDirectory: '../coverage',
 };
 
 export default config;

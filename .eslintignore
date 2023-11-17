@@ -29,3 +29,4 @@ node_modules_bak
 /src/assets
 .history
 .idea
+coverage

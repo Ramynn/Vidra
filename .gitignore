@@ -20,4 +20,4 @@ dist
 **/.next
 .idea
 .history
-
+coverage

@@ -7,6 +7,8 @@
     "build": "turbo run build --cache-dir=.turbo",
     "dev": "turbo run dev",
     "test": "turbo run test --cache-dir=.turbo",
+    "test:watch": "turbo run test -- --watch",
+    "coverage": "turbo run test --cache-dir=.turbo -- --coverage",
     "lint": "turbo run lint --cache-dir=.turbo",
     "format": "turbo run format",
     "prepare": "husky install"

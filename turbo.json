@@ -20,7 +20,11 @@
       "outputs": [".eslintcache"]
     },
     "test": {
-      "outputs": ["coverage/**"],
+      "dependsOn": [],
+      "cache": false
+    },
+    "coverage": {
+      "outputs": ["coverage/**", "**/coverage/**"],
       "dependsOn": [],
       "cache": false
     },
