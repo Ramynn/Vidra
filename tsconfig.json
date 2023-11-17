@@ -5,6 +5,5 @@
     "sourceMap": true
   },
   "exclude": ["node_modules", "deploy"],
-  "include": ["src"],
-  "types": ["node", "jest", "react", "react-dom", "@testing-library/jest-dom"]
+  "include": ["src"]
 }

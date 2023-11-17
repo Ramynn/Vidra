@@ -8,6 +8,7 @@ const withNextra = nextra({
 const config = withNextra({
   output: 'standalone',
   swcMinify: true,
+  eslint: false,
 });
 
 export default config;
