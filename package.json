@@ -4,7 +4,7 @@
   "description": "React video player in TypeScript - lightweight, customizable, and fast, with support for live streams, offline videos, multiple streaming engines, and Storyboard.",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --cache-dir=.turbo",
     "dev": "turbo run dev",
     "test": "turbo run test",
     "lint": "turbo run lint",

@@ -9,12 +9,7 @@ on:
 jobs:
   build:
     name: Build and Test
-    timeout-minutes: 15
     runs-on: ubuntu-latest
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -24,6 +19,14 @@ jobs:
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 8.10.5
+
+      - name: Cache turbo build setup
+        uses: actions/cache@v3
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
