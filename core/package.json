@@ -7,8 +7,8 @@
   "scripts": {
     "build": "tsup --target es5 --minify",
     "dev": "tsup --watch",
-    "lint": "eslint src",
-    "format": "eslint src --fix",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "format": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
     "test": "jest"
   },
   "repository": {

@@ -36,8 +36,11 @@
   "homepage": "https://github.com/Ramynn/Vidra#readme",
   "license": "GPL-3.0",
   "lint-staged": {
-    "*.{js,ts,tsx,json,scss}": [
+    "*.{js,ts,tsx,json}": [
       "eslint --cache --fix"
+    ],
+    "*.{scss}": [
+      "prettier --cache --write"
     ]
   },
   "dependencies": {
