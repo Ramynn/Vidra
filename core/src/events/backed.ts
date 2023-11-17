@@ -10,17 +10,17 @@ import type {
 import {BasePlayerAdapterError} from '../errors';
 
 export enum StreamingBackendEventNames {
-  Error = 'StreamingBackend:Error',
-  ManifestLoading = 'StreamingBackend:ManifestLoading',
-  ManifestLoaded = 'StreamingBackend:ManifestLoaded',
-  ManifestParsed = 'StreamingBackend:ManifestParsed',
-  BufferLoaded = 'StreamingBackend:BufferLoaded',
-  FragmentParsed = 'StreamingBackend:FragmentParsed',
-  MediaDetached = 'StreamingBackend:MediaDetached',
-  MediaAttached = 'StreamingBackend:MediaAttached',
-  LevelLoaded = 'StreamingBackend:LevelLoaded',
-  LevelSwitching = 'StreamingBackend:LevelSwitching',
-  LevelSwitched = 'StreamingBackend:LevelSwitched',
+  Error = 'BackendError',
+  ManifestLoading = 'BackendManifestLoading',
+  ManifestLoaded = 'BackendManifestLoaded',
+  ManifestParsed = 'BackendManifestParsed',
+  BufferLoaded = 'BackendBufferLoaded',
+  FragmentParsed = 'BackendFragmentParsed',
+  MediaDetached = 'BackendMediaDetached',
+  MediaAttached = 'BackendMediaAttached',
+  LevelLoaded = 'BackendLevelLoaded',
+  LevelSwitching = 'BackendLevelSwitching',
+  LevelSwitched = 'BackendLevelSwitched',
 }
 
 export interface StreamingBackendEvents {
