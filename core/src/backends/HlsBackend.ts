@@ -1,5 +1,7 @@
 import type {ErrorData, Level as HlsLevel, Level} from 'hls.js';
-import Hls, {ErrorDetails, ErrorTypes, Events as HlsEvents} from 'hls.js';
+import Hls from 'hls.js';
+import {ErrorTypes, Events as HlsEvents, ErrorDetails} from 'hls.js/dist/hls.js';
+
 import type {MediaStreamingControllerInfo, StreamingLevel, StreamingLevels} from '../libs';
 import {
   MediaStreamingControllerEvents,

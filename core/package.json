@@ -25,13 +25,13 @@
   ],
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "hls.js": "^1.4.12"
   },
   "dependencies": {
     "@tippyjs/react": "^4.2.6",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.5",
-    "hls.js": "^1.4.12",
     "jotai": "^2.5.1",
     "radash": "^11.0.0"
   },
