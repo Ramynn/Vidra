@@ -1,3 +1,5 @@
+import {RegularFunctionType} from '../types';
+
 /**
  * Checks if a value is defined (not undefined or null).
  * @param value - The value to check.
@@ -133,4 +135,8 @@ export const promiseAllWithRateLimit = <T>(
       spawnNewPromise();
     }
   });
+};
+
+export const isFunction = (input: unknown): input is RegularFunctionType => {
+  return isDefined(input) && {}.toString.call(input) === '[object Function]';
 };

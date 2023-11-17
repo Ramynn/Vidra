@@ -5,6 +5,7 @@ import {
   sleep,
   retry,
   promiseAllWithRateLimit,
+  isFunction,
 } from '../genericHelpers';
 
 describe('isDefined', () => {
@@ -68,5 +69,62 @@ describe('promiseAllWithRateLimit', () => {
   test('resolves with an empty array if promises array is empty', async () => {
     const result = await promiseAllWithRateLimit(3, []);
     expect(result).toEqual([]);
+  });
+});
+
+describe('isFunction', () => {
+  test('returns true for a regular function', () => {
+    const regularFunction = function () {
+      // function body
+    };
+    expect(isFunction(regularFunction)).toBe(true);
+  });
+
+  test('returns true for an arrow function', () => {
+    const arrowFunction = () => {
+      // function body
+    };
+    expect(isFunction(arrowFunction)).toBe(true);
+  });
+
+  test('returns true for a function with parameters', () => {
+    const functionWithParams = function (x: number, y: number): number {
+      return x + y;
+    };
+    expect(isFunction(functionWithParams)).toBe(true);
+  });
+
+  test('returns true for an anonymous function', () => {
+    expect(isFunction(function () {})).toBe(true);
+  });
+
+  test('returns false for an object', () => {
+    const object = {key: 'value'};
+    expect(isFunction(object)).toBe(false);
+  });
+
+  test('returns false for an array', () => {
+    const array = [1, 2, 3];
+    expect(isFunction(array)).toBe(false);
+  });
+
+  test('returns false for a string', () => {
+    const str = 'Hello, World!';
+    expect(isFunction(str)).toBe(false);
+  });
+
+  test('returns false for a number', () => {
+    const number = 42;
+    expect(isFunction(number)).toBe(false);
+  });
+
+  test('returns false for undefined', () => {
+    const undefinedValue = undefined;
+    expect(isFunction(undefinedValue)).toBe(false);
+  });
+
+  test('returns false for null', () => {
+    const nullValue = null;
+    expect(isFunction(nullValue)).toBe(false);
   });
 });
