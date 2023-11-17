@@ -7,7 +7,8 @@
       "cache": true
     },
     "lint": {
-      "cache": true
+      "cache": true,
+      "outputs": [".eslintcache"]
     },
     "dev": {
       "outputs": ["dist/**", "build/**"],
@@ -15,7 +16,8 @@
       "cache": false
     },
     "format": {
-      "cache": false
+      "cache": true,
+      "outputs": [".eslintcache"]
     },
     "test": {
       "outputs": ["coverage/**"],
