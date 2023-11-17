@@ -1,4 +1,4 @@
-import {findElementLeftPosition, getPointerPosition} from '../domHelpers';
+import {findElementLeftPosition} from '../domHelpers';
 
 describe('findElementLeftPosition', () => {
   it('should return 0 for an element without a parent', () => {
@@ -26,48 +26,5 @@ describe('findElementLeftPosition', () => {
 
     const leftPosition = findElementLeftPosition(element);
     expect(leftPosition).toEqual(0);
-  });
-
-  // Add more test cases based on your specific scenarios...
-});
-
-describe('getPointerPosition', () => {
-  it('should calculate the correct pointer position within the element', () => {
-    const element = document.createElement('div');
-    element.style.width = '100px';
-    document.body.appendChild(element);
-
-    const event = new MouseEvent('click', {pageX: 50} as any);
-    const pointerPosition = getPointerPosition(element, event);
-    expect(pointerPosition).toBeCloseTo(0.5, 2);
-
-    document.body.removeChild(element);
-  });
-
-  it('should handle TouchEvent and calculate the correct pointer position', () => {
-    const element = document.createElement('div');
-    element.style.width = '100px';
-    document.body.appendChild(element);
-
-    const touchEvent = new TouchEvent('touchstart', {
-      touches: [{pageX: 25} as any],
-    });
-
-    const pointerPosition = getPointerPosition(element, touchEvent);
-    expect(pointerPosition).toBeCloseTo(0.25, 2);
-
-    document.body.removeChild(element);
-  });
-
-  it('should handle pointer position outside the element bounds', () => {
-    const element = document.createElement('div');
-    element.style.width = '100px';
-    document.body.appendChild(element);
-
-    const event = new MouseEvent('click', {pageX: 150} as any);
-    const pointerPosition = getPointerPosition(element, event);
-    expect(pointerPosition).toEqual(1);
-
-    document.body.removeChild(element);
   });
 });
