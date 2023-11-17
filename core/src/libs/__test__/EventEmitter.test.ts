@@ -125,6 +125,4 @@ describe('EventEmitter', () => {
     expect(stringListener).toHaveBeenCalledWith(expect.objectContaining({type: 'event1', data: 'data1'}));
     expect(numberListener).toHaveBeenCalledWith(expect.objectContaining({type: 'event2', data: 42}));
   });
-
-  // Add more test cases based on your specific scenarios...
 });
