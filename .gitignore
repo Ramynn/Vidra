@@ -15,4 +15,8 @@ sketch
 
 dist
 .turbo
-/.eslintcache
+.eslintcache
+**/.eslintcache
+**/.next
+.idea
+
