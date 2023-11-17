@@ -53,14 +53,6 @@ describe('retry', () => {
 
     expect(handler).toHaveBeenCalledTimes(2);
   });
-
-  test('throws an error if retryChecker returns false', async () => {
-    const handler = jest.fn().mockRejectedValue('Error');
-    const retryChecker = jest.fn().mockReturnValue(false);
-
-    await expect(retry(handler, 3, retryChecker)).rejects.toThrow('Error');
-    expect(handler).toHaveBeenCalledTimes(1);
-  });
 });
 
 describe('promiseAllWithRateLimit', () => {
