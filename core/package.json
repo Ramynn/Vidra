@@ -1,6 +1,6 @@
 {
   "name": "vidra",
-  "version": "0.0.1.beta.2",
+  "version": "0.0.1.beta.3",
   "description": "React video player in TypeScript - lightweight, customizable, and fast, with support for live streams, offline videos, multiple streaming engines, and Storyboard.",
   "private": false,
   "type": "module",
