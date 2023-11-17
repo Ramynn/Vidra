@@ -1,0 +1,17 @@
+{
+  "name": "@vidra/documents",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next --port 3200",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.0.3",
+    "nextra": "^2.13.2"
+  },
+  "devDependencies": {
+    "nextra-theme-docs": "^2.13.2"
+  }
+}

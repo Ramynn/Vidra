@@ -1,0 +1,65 @@
+{
+  "name": "@vidra/core",
+  "version": "0.0.1",
+  "description": "React video player in TypeScript - lightweight, customizable, and fast, with support for live streams, offline videos, multiple streaming engines, and Storyboard.",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramynn/vidra.git"
+  },
+  "keywords": [
+    "react",
+    "video",
+    "player",
+    "typescript",
+    "streaming",
+    "storyboard"
+  ],
+  "author": "Ramin Mohammadi",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/Ramynn/Vidra/issues"
+  },
+  "homepage": "https://github.com/Ramynn/Vidra#readme",
+  "license": "GPL-3.0",
+  "lint-staged": {
+    "*.{js,ts,tsx,json,scss}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/node": "^20.9.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "tsup": "^7.3.0",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.6.10",
+  "engines": {
+    "node": ">=18.16.0",
+    "pnpm": ">=8.6.0"
+  }
+}
