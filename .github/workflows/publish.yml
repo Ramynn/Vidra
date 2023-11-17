@@ -38,6 +38,6 @@ jobs:
         run: pnpm build
 
       - name: Publish
-        run: cd core && cp README.md dist && pnpm publish --access public
+        run: cp README.md core/dist && cd core && pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
