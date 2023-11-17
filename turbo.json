@@ -3,6 +3,7 @@
   "pipeline": {
     "build": {
       "outputs": ["dist/**"],
+      "dependsOn": ["^build"],
       "cache": true
     },
     "lint": {
@@ -10,6 +11,7 @@
     },
     "dev": {
       "outputs": ["dist/**", "build/**"],
+      "dependsOn": ["^dev"],
       "cache": false
     },
     "format": {
