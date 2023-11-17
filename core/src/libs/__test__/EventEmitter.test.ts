@@ -125,4 +125,54 @@ describe('EventEmitter', () => {
     expect(stringListener).toHaveBeenCalledWith(expect.objectContaining({type: 'event1', data: 'data1'}));
     expect(numberListener).toHaveBeenCalledWith(expect.objectContaining({type: 'event2', data: 42}));
   });
+
+  it('should ignore invalid types for events', () => {
+    const listener: EventHandlerFunction<string> = jest.fn();
+
+    emitter.on(undefined as any, listener);
+    emitter.on(null as any, listener);
+
+    (emitter as any).emit('event1', 'data1');
+
+    expect(listener).not.toHaveBeenCalled();
+  });
+
+  it('should ignore invalid handlers', () => {
+    const listener: EventHandlerFunction<string> = jest.fn();
+
+    emitter.on('event1', listener);
+
+    emitter.on('event1', undefined as any);
+    emitter.on('event1', null as any);
+    emitter.on('event1', 'invalidHandler' as any);
+
+    (emitter as any).emit('event1', 'data1');
+
+    expect(listener).toHaveBeenCalled();
+  });
+
+  it('should ignore invalid functions as handlers', () => {
+    const listener: EventHandlerFunction<string> = jest.fn();
+
+    emitter.on('event1', listener);
+
+    emitter.on('event1', {} as any);
+    emitter.on('event1', 123 as any);
+
+    (emitter as any).emit('event1', 'data1');
+
+    expect(listener).toHaveBeenCalled();
+  });
+
+  it('should ignore invalid listeners', () => {
+    emitter.on('event1', {} as any);
+    emitter.on('event1', 123 as any);
+
+    (emitter as any).emit('event1', 'data1'); // No error should occur
+
+    // Cleanup invalid listeners
+    emitter.removeAllListeners();
+
+    expect(true).toBeTruthy(); // No error should occur during cleanup
+  });
 });
