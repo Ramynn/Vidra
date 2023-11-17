@@ -1,7 +1,4 @@
-export interface BaseErrorUserMessage {
-  title: string;
-  messages: string[];
-}
+import {BaseErrorUserMessage} from './types';
 
 export abstract class BaseError extends Error {
   public readonly id: string;
