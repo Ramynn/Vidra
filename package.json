@@ -11,7 +11,8 @@
     "coverage": "turbo run test --cache-dir=.turbo -- --coverage",
     "lint": "turbo run lint --cache-dir=.turbo",
     "format": "turbo run format",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "updeps": "ncu --deep --concurrency 12 -u"
   },
   "repository": {
     "type": "git",
@@ -51,7 +52,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@jest/globals": "^29.7.0",
     "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.1.0",
+    "@testing-library/react": "^14.1.2",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.8",
     "@types/node": "^20.9.1",
