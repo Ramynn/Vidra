@@ -10,15 +10,21 @@ describe('EventEmitter', () => {
   it('should add and trigger event listeners', () => {
     const listener1: EventHandlerFunction<string> = jest.fn();
     const listener2: EventHandlerFunction<number> = jest.fn();
+    const listener3: EventHandlerFunction<number> = jest.fn();
+    const listener4: EventHandlerFunction<number> = jest.fn();
 
     emitter.on('event1', listener1);
     emitter.on('event2', listener2);
+    emitter.on('event2', listener3);
+    emitter.on('event2', listener4);
 
     (emitter as any).emit('event1', 'data1');
     (emitter as any).emit('event2', 42);
 
     expect(listener1).toHaveBeenCalledWith(expect.objectContaining({type: 'event1', data: 'data1'}));
     expect(listener2).toHaveBeenCalledWith(expect.objectContaining({type: 'event2', data: 42}));
+    expect(listener3).toHaveBeenCalledWith(expect.objectContaining({type: 'event2', data: 42}));
+    expect(listener4).toHaveBeenCalledWith(expect.objectContaining({type: 'event2', data: 42}));
   });
 
   it('should remove event listeners', () => {
@@ -29,6 +35,9 @@ describe('EventEmitter', () => {
     emitter.on('event2', listener2);
 
     emitter.off('event1', listener1);
+    emitter.off('event1', 'listener1' as any);
+    emitter.off(null as any, listener1);
+    emitter.off(null as any, listener1);
 
     (emitter as any).emit('event2', 2);
 
@@ -87,6 +96,9 @@ describe('EventEmitter', () => {
 
     emitter.on('event1', listener1);
 
+    expect((emitter as any).hasListener('invalid_one', listener1)).toBeFalsy();
+    expect((emitter as any).hasListener('event1', listener1)).toBeTruthy();
+    expect((emitter as any).hasListener('event1', listener2)).toBeFalsy();
     expect((emitter as any).hasListener('event1')).toBeTruthy();
     expect((emitter as any).hasListener('event2')).toBeFalsy();
 
