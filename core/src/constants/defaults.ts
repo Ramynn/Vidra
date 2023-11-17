@@ -1,6 +1,7 @@
 import {PlayerStatesInterface, StreamingBackendClassType} from '../types';
+import {HlsBackend} from '../backends';
 
-export const DEFAULT_STREAMING_BACKENDS: StreamingBackendClassType[] = [];
+export const DEFAULT_STREAMING_BACKENDS: StreamingBackendClassType[] = [HlsBackend];
 
 export const DEFAULT_PLAYER_STATE: PlayerStatesInterface = Object.freeze({
   isStarted: false,

@@ -32,7 +32,8 @@
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.5",
     "hls.js": "^1.4.12",
-    "jotai": "^2.5.1"
+    "jotai": "^2.5.1",
+    "radash": "^11.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.9.1",

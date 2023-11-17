@@ -1,15 +1,13 @@
 import type {RefObject} from 'react';
-import {StreamingLevels} from '../libs';
+import {ClientLogger, MediaStreamingController, StreamingLevels} from '../libs';
 import {StoryBoardInterface} from './storyboard';
 
 export type InternalId = string;
 
-// TODO: Fix this type after implementing streaming backends
-export type ActiveStreamingBackendAtomInterface = any | null;
+export type ActiveStreamingBackendAtomInterface = StreamingBackendClassType | null;
 
 export interface PlayerStatesInterface {
-  // TODO: Fix this type after implementing streaming backends
-  streamingBackend?: InstanceType<any>;
+  streamingBackend?: InstanceType<StreamingBackendClassType>;
   playerRef?: RefObject<HTMLVideoElement>;
   rootRef?: RefObject<HTMLDivElement>;
   storyboard?: StoryBoardInterface;
@@ -52,8 +50,7 @@ export type PlayersStatesAtomInterface = Record<InternalId, PlayerStatesInterfac
 
 export type PlayersOptionsAtomInterface = Record<InternalId, PlayerOptionsInterface>;
 
-// TODO: Fix this type after implementing logger
-export type PlayerLoggerAtomInterface = any | null;
+export type PlayerLoggerAtomInterface = ClientLogger | null;
 
 export enum PlayerActivityNames {
   SettingsMenu = 'internalSettingsMenu',
@@ -72,5 +69,4 @@ export interface PlayerOptionsInterface {
   nativeControllers: boolean;
 }
 
-// TODO: Fix this type after implementing streaming backends
-export type StreamingBackendClassType = new () => any;
+export type StreamingBackendClassType = new () => MediaStreamingController;

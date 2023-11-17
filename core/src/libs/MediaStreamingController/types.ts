@@ -2,11 +2,6 @@ import {TimeSpanTracker} from '../TimeSpanTracker';
 import {RecurringTaskScheduler} from '../RecurringTaskScheduler';
 import {ElapsedTimeTracker} from '../ElapsedTimeTracker';
 
-export interface MediaStreamingControllerInfoInterface {
-  name: string;
-  version: string;
-}
-
 export interface InternalStates {
   currentTime: number;
   played: TimeSpanTracker;

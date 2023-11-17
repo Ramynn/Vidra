@@ -16,7 +16,7 @@ import {enabledFullscreen, exitFullscreen, isFullscreen, requestFullscreen, isDe
 import {
   InternalStates,
   InternalMeasurements,
-  MediaStreamingControllerInfoInterface,
+  MediaStreamingControllerInfo,
   ClientLogger,
   InternalScheduler,
   StreamingLevels,
@@ -113,7 +113,7 @@ export abstract class MediaStreamingController extends EventEmitter<
     return this.states.media!;
   }
 
-  static info(): MediaStreamingControllerInfoInterface {
+  static info(): MediaStreamingControllerInfo {
     throw new AdapterMethodNotImplementedError(this.info(), 'info');
   }
 
