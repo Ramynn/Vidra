@@ -1,7 +1,7 @@
 import type {PlayerEventsTimeUpdateInterface, PlayerEventsFirstStartInterface} from './types';
 import {BasePlayerError} from '../errors';
 
-export enum PlayerEventNames {
+export enum PlayerEvents {
   PlayError = 'PlayError',
   Load = 'Load',
   LoadStart = 'LoadStart',
@@ -30,30 +30,30 @@ export enum PlayerEventNames {
   VolumeChange = 'VolumeChange',
 }
 
-export interface PlayerEvents {
-  [PlayerEventNames.PlayError]: BasePlayerError;
-  [PlayerEventNames.Load]: never;
-  [PlayerEventNames.LoadStart]: never;
-  [PlayerEventNames.Waiting]: never;
-  [PlayerEventNames.CanPlay]: never;
-  [PlayerEventNames.CanPlayThrough]: never;
-  [PlayerEventNames.Playing]: never;
-  [PlayerEventNames.Ended]: never;
-  [PlayerEventNames.FirstStart]: PlayerEventsFirstStartInterface;
-  [PlayerEventNames.Seeking]: never;
-  [PlayerEventNames.Seeked]: never;
-  [PlayerEventNames.Play]: never;
-  [PlayerEventNames.Pause]: never;
-  [PlayerEventNames.Progress]: never;
-  [PlayerEventNames.DurationChange]: never;
-  [PlayerEventNames.Error]: BasePlayerError;
-  [PlayerEventNames.Suspend]: never;
-  [PlayerEventNames.Abort]: never;
-  [PlayerEventNames.Emptied]: never;
-  [PlayerEventNames.Stalled]: never;
-  [PlayerEventNames.LoadedMetadata]: never;
-  [PlayerEventNames.LoadedData]: never;
-  [PlayerEventNames.TimeUpdate]: PlayerEventsTimeUpdateInterface;
-  [PlayerEventNames.RateChange]: never;
-  [PlayerEventNames.VolumeChange]: never;
+export interface PlayerEventsMap {
+  [PlayerEvents.PlayError]: BasePlayerError;
+  [PlayerEvents.Load]: never;
+  [PlayerEvents.LoadStart]: never;
+  [PlayerEvents.Waiting]: never;
+  [PlayerEvents.CanPlay]: never;
+  [PlayerEvents.CanPlayThrough]: never;
+  [PlayerEvents.Playing]: never;
+  [PlayerEvents.Ended]: never;
+  [PlayerEvents.FirstStart]: PlayerEventsFirstStartInterface;
+  [PlayerEvents.Seeking]: never;
+  [PlayerEvents.Seeked]: never;
+  [PlayerEvents.Play]: never;
+  [PlayerEvents.Pause]: never;
+  [PlayerEvents.Progress]: never;
+  [PlayerEvents.DurationChange]: never;
+  [PlayerEvents.Error]: BasePlayerError;
+  [PlayerEvents.Suspend]: never;
+  [PlayerEvents.Abort]: never;
+  [PlayerEvents.Emptied]: never;
+  [PlayerEvents.Stalled]: never;
+  [PlayerEvents.LoadedMetadata]: never;
+  [PlayerEvents.LoadedData]: never;
+  [PlayerEvents.TimeUpdate]: PlayerEventsTimeUpdateInterface;
+  [PlayerEvents.RateChange]: never;
+  [PlayerEvents.VolumeChange]: never;
 }

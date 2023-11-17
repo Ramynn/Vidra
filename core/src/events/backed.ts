@@ -9,30 +9,30 @@ import type {
 
 import {BasePlayerAdapterError} from '../errors';
 
-export enum StreamingBackendEventNames {
-  Error = 'BackendError',
-  ManifestLoading = 'BackendManifestLoading',
-  ManifestLoaded = 'BackendManifestLoaded',
-  ManifestParsed = 'BackendManifestParsed',
-  BufferLoaded = 'BackendBufferLoaded',
-  FragmentParsed = 'BackendFragmentParsed',
-  MediaDetached = 'BackendMediaDetached',
-  MediaAttached = 'BackendMediaAttached',
-  LevelLoaded = 'BackendLevelLoaded',
-  LevelSwitching = 'BackendLevelSwitching',
-  LevelSwitched = 'BackendLevelSwitched',
+export enum MediaStreamingControllerEvents {
+  Error = 'MediaStreamingError',
+  ManifestLoading = 'MediaStreamingManifestLoading',
+  ManifestLoaded = 'MediaStreamingManifestLoaded',
+  ManifestParsed = 'MediaStreamingManifestParsed',
+  BufferLoaded = 'MediaStreamingBufferLoaded',
+  FragmentParsed = 'MediaStreamingFragmentParsed',
+  MediaDetached = 'MediaStreamingMediaDetached',
+  MediaAttached = 'MediaStreamingMediaAttached',
+  LevelLoaded = 'MediaStreamingLevelLoaded',
+  LevelSwitching = 'MediaStreamingLevelSwitching',
+  LevelSwitched = 'MediaStreamingLevelSwitched',
 }
 
-export interface StreamingBackendEvents {
-  [StreamingBackendEventNames.Error]: BasePlayerAdapterError;
-  [StreamingBackendEventNames.ManifestLoaded]: never;
-  [StreamingBackendEventNames.ManifestLoading]: StreamingEventsManifestLoadingInterface;
-  [StreamingBackendEventNames.ManifestParsed]: StreamingEventsManifestParsedInterface;
-  [StreamingBackendEventNames.BufferLoaded]: never;
-  [StreamingBackendEventNames.FragmentParsed]: never;
-  [StreamingBackendEventNames.MediaAttached]: StreamingEventsMediaAttachedInterface;
-  [StreamingBackendEventNames.MediaDetached]: never;
-  [StreamingBackendEventNames.LevelLoaded]: StreamingEventsLevelLoadedInterface;
-  [StreamingBackendEventNames.LevelSwitching]: StreamingEventsLevelSwitchingInterface;
-  [StreamingBackendEventNames.LevelSwitched]: StreamingEventsLevelSwitchedInterface;
+export interface MediaStreamingControllerEventsMap {
+  [MediaStreamingControllerEvents.Error]: BasePlayerAdapterError;
+  [MediaStreamingControllerEvents.ManifestLoaded]: never;
+  [MediaStreamingControllerEvents.ManifestLoading]: StreamingEventsManifestLoadingInterface;
+  [MediaStreamingControllerEvents.ManifestParsed]: StreamingEventsManifestParsedInterface;
+  [MediaStreamingControllerEvents.BufferLoaded]: never;
+  [MediaStreamingControllerEvents.FragmentParsed]: never;
+  [MediaStreamingControllerEvents.MediaAttached]: StreamingEventsMediaAttachedInterface;
+  [MediaStreamingControllerEvents.MediaDetached]: never;
+  [MediaStreamingControllerEvents.LevelLoaded]: StreamingEventsLevelLoadedInterface;
+  [MediaStreamingControllerEvents.LevelSwitching]: StreamingEventsLevelSwitchingInterface;
+  [MediaStreamingControllerEvents.LevelSwitched]: StreamingEventsLevelSwitchedInterface;
 }

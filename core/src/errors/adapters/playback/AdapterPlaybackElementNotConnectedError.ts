@@ -1,8 +1,8 @@
-import type {StreamingBackendInfoInterface} from '../../../libs';
+import type {MediaStreamingControllerInfo} from '../../../libs';
 import {BasePlayerAdapterError} from '../BasePlayerAdapterError';
 
 export class AdapterPlaybackElementNotConnectedError extends BasePlayerAdapterError {
-  constructor(adapter: StreamingBackendInfoInterface) {
+  constructor(adapter: MediaStreamingControllerInfo) {
     super(
       adapter,
       'AdapterPlaybackNotInitializedError',

@@ -1,11 +1,11 @@
-import type {StreamingBackendInfoInterface} from '../../libs';
+import type {MediaStreamingControllerInfo} from '../../libs';
 import {BasePlayerError} from '../BasePlayerError';
 
 export abstract class BasePlayerAdapterError extends BasePlayerError {
   isFatal: boolean = false;
-  adapter!: StreamingBackendInfoInterface;
+  adapter!: MediaStreamingControllerInfo;
 
-  protected constructor(adapter: StreamingBackendInfoInterface, name: string, message: string, isFatal: boolean) {
+  protected constructor(adapter: MediaStreamingControllerInfo, name: string, message: string, isFatal: boolean) {
     super(name, message);
 
     this.adapter = adapter;

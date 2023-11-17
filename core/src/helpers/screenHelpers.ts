@@ -65,7 +65,7 @@ export const requestFullscreen = (target: HTMLElement | HTMLElementWithBrowserMe
   }
 };
 
-export const exit = (): void => {
+export const exitFullscreen = (): void => {
   if (!isFullscreen()) {
     return;
   }
