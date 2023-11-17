@@ -11,8 +11,7 @@ import {
   MediaStreamingControllerEventsMap,
 } from '../../events';
 import {AdapterMethodNotImplementedError, BasePlayerError, PlayerNotInitializedError} from '../../errors';
-import {isDefined, retry} from '../../helpers';
-import {enabledFullscreen, exitFullscreen, isFullscreen, requestFullscreen} from '../../helpers/screenHelpers';
+import {enabledFullscreen, exitFullscreen, isFullscreen, requestFullscreen, isDefined, retry} from '../../helpers';
 
 import {
   InternalStates,
