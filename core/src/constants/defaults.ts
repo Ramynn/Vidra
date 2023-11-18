@@ -37,3 +37,7 @@ export const DEFAULT_PLAYER_STATE: PlayerStatesInterface = Object.freeze({
   selectedSeekTime: null,
   playbackRate: 1,
 });
+
+export const DEFAULT_THEME = 'default';
+
+export const DEFAULT_LOCALIZATION = {};

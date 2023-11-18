@@ -24,3 +24,11 @@ export const getPointerPosition = (element: HTMLElement, event: MouseEvent | Tou
 
   return Math.max(0, Math.min(1, (pageX - elementPosition) / element.offsetWidth));
 };
+
+export const getIsTouchDevice = (): boolean => {
+  return (
+    'ontouchstart' in window ||
+    !!navigator?.maxTouchPoints ||
+    !!(navigator as Navigator & {msMaxTouchPoints: number})?.msMaxTouchPoints
+  );
+};

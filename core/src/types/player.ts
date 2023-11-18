@@ -3,7 +3,7 @@ import {PlainObjectType} from './utils';
 
 export type PlayerDomMethodsEventType = SyntheticEvent<HTMLVideoElement, Event>;
 
-export type PlayerSeekbarEventType = Event | MouseEvent | TouchEvent;
+export type SeekbarEventType = Event | MouseEvent | TouchEvent;
 
 export enum PlayerElementMethods {
   OnLoadStart = 'onLoadStart',
@@ -31,4 +31,4 @@ export enum PlayerElementMethods {
 
 export type PlayerElementType = VideoHTMLAttributes<HTMLVideoElement>;
 
-export type PlayerTranslations = PlainObjectType;
+export type LocalizationType = PlainObjectType;
